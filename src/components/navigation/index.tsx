@@ -12,7 +12,7 @@ interface MenuItem {
 }
 
 const funBtnStyle =
-  "w-10 mt-4 first-of-type:mt-0 last-of-type:mb-5 lg:last-of-type:mb-0 aspect-square flex items-center justify-center duration-700 transition-all hover:text-[#1c1c23] bg-white lg:bg-transparent rounded-full shadow-lg lg:shadow-none";
+  "w-10 mt-4 first-of-type:mt-0 last-of-type:mb-10 lg:last-of-type:mb-0 aspect-square flex items-center justify-center duration-700 transition-all hover:text-[#1c1c23] bg-white lg:bg-transparent rounded-full shadow-lg lg:shadow-none";
 
 const Navigation: React.FC = () => {
   const [open, setOpen] = useState(false);
@@ -105,7 +105,7 @@ const Navigation: React.FC = () => {
                 })
               }
               className={[
-                "z-10 ml-8 duration-700 transition-all cursor-pointer hover:text-[#1c1c23]",
+                "z-50 ml-8 duration-700 transition-all cursor-pointer hover:text-[#1c1c23]",
                 open ? " translate-x-0" : " -translate-x-40 lg:translate-x-0",
               ].join(" ")}
               icon={open ? "mingcute:close-line" : "mingcute:menu-line"}

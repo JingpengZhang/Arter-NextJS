@@ -11,6 +11,9 @@ const infoStyle =
 
 const spliteBarStyle = " w-full h-px bg-[#d5d5d7] my-5";
 
+const socialLinkStyle =
+  "hover:text-[#1e1e28] duration-700 transition-all mx-1.5";
+
 const InfoBar: React.FC = () => {
   const [show, setShow] = useState(false);
 
@@ -21,7 +24,7 @@ const InfoBar: React.FC = () => {
   const infoBarRef = useOutsideClick(packUpInfoBar);
 
   return (
-    <section className="w-0 lg:w-72 duration-700 transition-all ">
+    <section className="w-0 lg:w-72 duration-700 transition-all z-20">
       <div
         ref={infoBarRef}
         className={[
@@ -37,7 +40,7 @@ const InfoBar: React.FC = () => {
             })
           }
           className={[
-            " duration-700 transition-all absolute top-0 lg:opacity-0 right-0 z-10 mr-4 h-16 flex items-center justify-center text-[#5c5c6d] hover:text-[#1c1c23]",
+            " duration-700 transition-all absolute top-0 lg:opacity-0 right-0 z-50 mr-4 h-16 flex items-center justify-center text-[#5c5c6d] hover:text-[#1c1c23]",
             show ? "translate-x-16 lg:translate-x-0" : "translate-x-16 ",
           ].join(" ")}
         >
@@ -87,12 +90,12 @@ const InfoBar: React.FC = () => {
               <div className={spliteBarStyle}></div>
             </div>
           </div>
-          <div className="bg-white h-12 w-full flex items-center justify-center text-[#5c5c6d]">
-            <Link
-              href={""}
-              className="hover:text-[#1e1e28] duration-700 transition-all"
-            >
-              <Icon icon="mdi:github" width="18" />
+          <div className="bg-white h-11 w-full flex items-center justify-center shadow-lg text-[#5c5c6d]">
+            <Link href={""} className={socialLinkStyle}>
+              <Icon icon="mdi:github" width="16" />
+            </Link>
+            <Link href={""} className={socialLinkStyle}>
+              <Icon icon="mdi:email" width="16" />
             </Link>
           </div>
         </div>
