@@ -19,9 +19,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className=" flex items-center justify-center h-screen">
-        <div className="h-[95vh] w-[95vw] shadow-lg flex">
+        <div className=" transition-all overflow-hidden h-full w-full lg:h-[95vh] lg:w-[95vw] shadow-lg flex relative">
           <InfoBar />
-          <div className=" flex-grow"></div>
+          <div className=" flex-grow bg-gray-300">
+            <div className="w-full h-16 lg:h-0 bg-white shadow-md transition-all"></div>
+          </div>
           <Navigation />
         </div>
       </body>
