@@ -1,9 +1,10 @@
-import Image from 'next/image'
+import Image from "next/image";
+import HelloCard from "./components/HelloCard";
 
 export default function Home() {
   return (
     <main>
-     <p>asd</p>
+      <HelloCard />
     </main>
-  )
+  );
 }

@@ -6,7 +6,6 @@ import Navigation from "../components/navigation";
 import Image from "next/image";
 import BGImage from "../assets/images/bg.jpg";
 import CopyrightBar from "../components/copyright-bar";
-
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -28,14 +27,15 @@ export default function RootLayout({
             {/** 移动端顶部栏 */}
             <div className="fixed w-full h-16 lg:h-0 bg-white shadow-md transition-all"></div>
             {/** 背景图 */}
-            <div className=" overflow-hidden w-full h-fit absolute top-16 lg:top-0 opacity-[0.04]">
-              <Image
-                src={BGImage}
-                alt="背景图"
-                className="w-full h-96 object-cover object-top"
-              />
-            </div>
-            <section className=" transition-all  h-full pt-[6.5rem] lg:pt-10 flex flex-col overflow-y-auto justify-between">
+            <div
+              style={{
+                backgroundImage: `url(${BGImage.src})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+              className="overflow-hidden w-full absolute z-[1] opacity-10 top-16  lg:top-0 h-[22.5rem]"
+            ></div>
+            <section className=" transition-all relative z-[2]  h-full pt-[6.5rem] lg:pt-10 flex flex-col overflow-y-auto justify-between">
               <section className="px-6">{children}</section>
               <CopyrightBar />
             </section>

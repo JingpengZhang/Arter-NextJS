@@ -85,7 +85,7 @@ const Navigation: React.FC = () => {
   return (
     <section
       className={[
-        "w-0 duration-700 transition-all",
+        "w-0 duration-700 transition-all z-[20]",
         open ? "lg:w-56" : "lg:w-20",
       ].join(" ")}
     >
@@ -93,7 +93,7 @@ const Navigation: React.FC = () => {
         ref={navRef}
         className={[
           "translate-x-full lg:translate-x-0 h-full bg-[#f4f4f6] shadow-lg text-[#5c5c6d] duration-700 transition-all flex flex-col justify-between",
-          open ? "w-56 -translate-x-56" : "w-20",
+          open ? "w-56 -translate-x-[14rem]" : "w-20",
         ].join(" ")}
       >
         <div className="w-full">
