@@ -35,7 +35,7 @@ export default function RootLayout({
               }}
               className="overflow-hidden w-full absolute z-[1] opacity-10 top-16  lg:top-0 h-[22.5rem]"
             ></div>
-            <section className=" transition-all relative z-[2]  h-full pt-[6.5rem] lg:pt-10 flex flex-col overflow-y-auto justify-between">
+            <section className=" transition-all relative z-[2]  h-full pt-[5rem] lg:pt-10 flex flex-col overflow-y-auto justify-between">
               <section className="px-6">{children}</section>
               <CopyrightBar />
             </section>
