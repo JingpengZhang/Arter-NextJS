@@ -7,9 +7,11 @@ import Typed from "typed.js";
 const HelloCard: React.FC = () => {
   const typedRef = useRef<HTMLSpanElement>(null);
 
+  let typed: Typed | null = null;
+
   useEffect(() => {
-    if (typedRef.current) {
-      new Typed(typedRef.current, {
+    if (typedRef.current && typed === null) {
+      typed = new Typed(typedRef.current, {
         strings: [
           "I am a frond-end developer.",
           "I am building Web APP.",
@@ -39,7 +41,7 @@ const HelloCard: React.FC = () => {
       </p>
       <p className="text-white mt-5 text-md">
         &lt;<span className="text-primary">code</span>&gt;
-        <span className="" ref={typedRef}></span> &lt;
+        <span className=" font-mono" ref={typedRef}></span> &lt;
         <span className="text-primary">code</span>&gt;
       </p>
     </div>
