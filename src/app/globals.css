@@ -7,3 +7,47 @@
     @apply bg-bg-light;
   }
 }
+
+@layer components {
+  .poccur.arter {
+    @apply pb-4;
+  }
+  .poccur.arter p {
+    @apply text-sm leading-7 mb-4 indent-8;
+  }
+
+  .poccur.arter blockquote {
+    @apply bg-gray-100 px-7 py-6;
+  }
+
+  .poccur.arter blockquote {
+    @apply bg-gray-100 px-7 py-6 mb-4;
+  }
+  .poccur.arter blockquote p {
+    @apply font-bold;
+  }
+
+  .poccur.arter blockquote cite {
+    @apply text-right block text-sm text-stone-800 not-italic;
+  }
+  .poccur.arter blockquote cite::before {
+    content: "——";
+    @apply mr-2;
+  }
+
+  .poccur.arter ul {
+    @apply mb-4;
+  }
+
+  .poccur.arter ul li {
+    @apply text-sm leading-7 before:block before:w-1 before:h-1 before:bg-primary before:rounded-full flex items-start before:mr-3 before:flex-shrink-0 before:translate-y-3;
+  }
+
+  .poccur.arter h2 {
+    @apply text-2xl font-bold mb-4 mt-8;
+  }
+
+  .poccur.arter img {
+    @apply mb-6 max-w-full mx-auto;
+  }
+}
